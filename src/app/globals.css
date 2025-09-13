@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@plugin './hero.ts';
+/* Note: You may need to change the path to fit your project structure */
+@source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Pokemon typing classes */
+.type-normal { @apply bg-gray-200 text-gray-800; }
+.type-fire { @apply bg-red-500 text-white; }
+.type-water { @apply bg-blue-500 text-white; }
+.type-grass { @apply bg-green-500 text-white; }
+.type-electric { @apply bg-yellow-400 text-yellow-900; }
+.type-ice { @apply bg-blue-200 text-blue-800; }
+.type-fighting { @apply bg-orange-600 text-white; }
+.type-poison { @apply bg-purple-500 text-white; }
+.type-ground { @apply bg-yellow-700 text-white; }
+.type-flying { @apply bg-indigo-300 text-indigo-900; }
+.type-psychic { @apply bg-pink-500 text-white; }
+.type-bug { @apply bg-lime-600 text-white; }
+.type-rock { @apply bg-stone-500 text-white; }
+.type-ghost { @apply bg-purple-800 text-white; }
+.type-dragon { @apply bg-indigo-600 text-white; }
+.type-steel { @apply bg-slate-500 text-white; }
+.type-dark { @apply bg-gray-800 text-white; }
+.type-fairy { @apply bg-pink-300 text-pink-900; }
+
+/* Gender classes */
+.gender-male { @apply bg-blue-100 text-blue-700; }
+.gender-female { @apply bg-pink-100 text-pink-700; }
+.gender-genderless { @apply bg-gray-300 text-gray-800; }
