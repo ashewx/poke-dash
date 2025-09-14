@@ -88,7 +88,7 @@ export default function Info() {
                 <ul className="flex justify-center items-center gap-2 mt-2">
                   {pokemon.abilities.map((a) => (
                     <li key={a} className="capitalize px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium shadow w-fit">
-                      {a}
+                      {a.replaceAll("-", " ")}
                     </li>
                   ))}
                 </ul>

@@ -77,7 +77,7 @@ export default function Gallery() {
                   ) : (
                     <div className="w-[180px] h-[180px] bg-gray-100 flex items-center justify-center text-black">No Image</div>
                   )}
-                  <span className="mt-2 text-lg font-semibold">{capitalize(p.name).replaceAll("-", " ")}</span>
+                  <span className="mt-2 text-lg font-semibold">{capitalize(p.name.replaceAll("-", " "))}</span>
                 </CardHeader>
                 <CardBody className="flex flex-col items-center">
                   <div className="flex gap-2 mb-1">
